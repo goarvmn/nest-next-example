@@ -5,9 +5,9 @@ function Header() {
     <header>
       <div className="flex items-center space-x-2 md:space-x-10">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
-          width={50}
-          height={50}
+          src="/vercel.svg"
+          width={100}
+          height={100}
           className="cursor-pointer object-contain"
         />
         <ul className="hidden space-x-4 md:flex">

@@ -41,14 +41,4 @@ export class ViewController {
       .getNextServer()
       .render(req, res, parsedUrl.pathname, parsedUrl.query);
   }
-
-  @Get('login')
-  public async login(@Req() req: Request, @Res() res: Response) {
-    await this.handler(req, res);
-  }
-
-  @Get('logout')
-  public async logout(@Req() req: Request, @Res() res: Response) {
-    await this.handler(req, res);
-  }
 }
