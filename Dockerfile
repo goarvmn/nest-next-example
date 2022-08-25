@@ -1,10 +1,10 @@
 FROM node:14-alpine
 
-WORKDIR /app
-
 RUN apk --no-cache add curl
 
-COPY package*.json ./
+WORKDIR /app
+
+COPY package.json package-lock.json ./
 RUN npm install
 
 COPY . /app
