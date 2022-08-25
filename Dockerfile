@@ -4,12 +4,12 @@ RUN apk --no-cache add curl
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm install
+COPY package.json ./
+RUN yarn install
 
 COPY . /app
 COPY .env.example /app/.env
 
-RUN npm run build
+RUN yarn build
 
-CMD npm run start:prod
+CMD yarn start:prod
