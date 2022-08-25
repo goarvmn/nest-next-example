@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "npm run build:nest && npm run build:next",
+    "build": "NODE_ENV npm run build:nest && npm run build:next",
     "build:nest": "nest build",
     "build:next": "cd src/client && next build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -14,7 +14,7 @@
     "next": "cd src/client && next",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/src/server/main",
+    "start:prod": "NODE_ENV node dist/src/server/main",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
